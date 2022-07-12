@@ -897,6 +897,13 @@ cookie@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+copy-anything@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/copy-anything/-/copy-anything-3.0.2.tgz#7189171ff5e1893b2287e8bf574b8cd448ed50b1"
+  integrity sha512-CzATjGXzUQ0EvuvgOCI6A4BGOo2bcVx8B+eC2nF862iv9fopnPQwlrbACakNCHRIJbCSBj+J/9JeDf60k64MkA==
+  dependencies:
+    is-what "^4.1.6"
+
 create-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
@@ -1220,6 +1227,11 @@ is-stream@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==
+
+is-what@^4.1.6:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/is-what/-/is-what-4.1.7.tgz#c41dc1d2d2d6a9285c624c2505f61849c8b1f9cc"
+  integrity sha512-DBVOQNiPKnGMxRMLIYSwERAS5MVY1B7xYiGnpgctsOFvVDz9f9PFXXxMcTOHuoqYp4NK9qFYQaIC1NRRxLMpBQ==
 
 isarray@^1.0.0:
   version "1.0.0"
@@ -1802,6 +1814,13 @@ styled-jsx@5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-5.0.2.tgz#ff230fd593b737e9e68b630a694d460425478729"
   integrity sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==
+
+superjson@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/superjson/-/superjson-1.9.1.tgz#e23bd2e8cf0f4ade131d6d769754cac7eaa8ab34"
+  integrity sha512-oT3HA2nPKlU1+5taFgz/HDy+GEaY+CWEbLzaRJVD4gZ7zMVVC4GDNFdgvAZt6/VuIk6D2R7RtPAiCHwmdzlMmg==
+  dependencies:
+    copy-anything "^3.0.2"
 
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
