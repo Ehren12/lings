@@ -70,7 +70,6 @@ export const CreateLinkMutation = extendType({
       args: {
         title: nonNull(stringArg()),
         url: nonNull(stringArg()),
-        imageUrl: nonNull(stringArg()),
         category: nonNull(stringArg()),
         description: nonNull(stringArg()),
       },
@@ -86,7 +85,6 @@ export const CreateLinkMutation = extendType({
         const newLink = {
           title: args.title,
           url: args.url,
-          imageUrl: args.imageUrl,
           category: args.category,
           description: args.description,
         };

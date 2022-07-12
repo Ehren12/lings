@@ -13,7 +13,7 @@ model Link {
   title       String
   description String
   url         String
-  imageUrl    String
+  imageUrl    String?
   category    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

@@ -7,20 +7,20 @@ const CreateLinkMutation = gql`
   mutation (
     $title: String!
     $url: String!
-    $imageUrl: String!
+
     $category: String!
     $description: String!
   ) {
     createLink(
       title: $title
       url: $url
-      imageUrl: $imageUrl
+
       category: $category
       description: $description
     ) {
       title
       url
-      imageUrl
+
       category
       description
     }
@@ -35,34 +35,34 @@ const Admin = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const uploadPhoto = async (e) => {
-    const file = e.target.files[0];
-    const filename = encodeURIComponent(file.name);
-    const res = await fetch(`/api/upload-image?file=${filename}`);
-    const data = await res.json();
-    const formData = new FormData();
+//   const uploadPhoto = async (e) => {
+//     const file = e.target.files[0];
+//     const filename = encodeURIComponent(file.name);
+//     const res = await fetch(`https://api.cloudinary.com/v1_1/[Your Cloud Name]/image/upload`);
+//     const data = await res.json();
+//     const formData = new FormData();
 
-    Object.entries({ ...data.fields, file }).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
+//     for ( const file of file.files ) {
+//   formData.append('file', file);
+// }
 
-    toast.promise(
-      fetch(data.url, {
-        method: 'POST',
-        body: formData,
-      }),
-      {
-        loading: 'Uploading...',
-        success: 'Image successfully uploaded!🎉',
-        error: `Upload failed 😥 Please try again ${error}`,
-      }
-    );
-  };
+//     toast.promise(
+//       fetch(data.url, {
+//         method: 'POST',
+//         body: formData,
+//       }),
+//       {
+//         loading: 'Uploading...',
+//         success: 'Image successfully uploaded!🎉',
+//         error: `Upload failed 😥 Please try again ${error}`,
+//       }
+//     );
+//   };
 
   const onSubmit = async (data) => {
-    const { title, url, category, description, image } = data;
-    const imageUrl = `https://my-awesome-links-bucket.s3.amazonaws.com/${image[0].name}`;
-    const variables = { title, url, category, description, imageUrl };
+    const { title, url, category, description} = data;
+    // const imageUrl = `https://my-awesome-links-bucket.s3.amazonaws.com/${image[0].name}`;
+    const variables = { title, url, category, description};
     try {
       toast.promise(createLink({ variables }), {
         loading: 'Creating new link..',
@@ -122,7 +122,7 @@ const Admin = () => {
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           />
         </label>
-        <label className="block">
+        {/*<label className="block">
           <span className="text-gray-700">
             Upload a .png or .jpg image (max 1MB).
           </span>
@@ -133,7 +133,7 @@ const Admin = () => {
             accept="image/png, image/jpeg"
             name="image"
           />
-        </label>
+        </label>*/}
 
         <button
           disabled={loading}

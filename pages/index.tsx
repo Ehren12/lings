@@ -15,7 +15,6 @@ const AllLinksQuery = gql`
         cursor
         node {
           index
-          imageUrl
           url
           title
           category
@@ -68,7 +67,7 @@ function Home() {
                   url={node.url}
                   id={node.id}
                   description={node.description}
-                  imageUrl={node.imageUrl}
+                  // imageUrl={node.imageUrl}
                 />
               </a>
             </Link>
