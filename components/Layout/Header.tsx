@@ -1,10 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { useUser } from '@auth0/nextjs-auth0';
+import Head from 'next/head'
 
 const Header = () => {
   const { user } = useUser();
   return (
+    <>
+      <Head>
+        <title>Lings-The Best all in one link bookmarker</title>
+        <meta name="description" content="This is lings the best link bookmarker where users can create and bookmarkers others links!" />
+        <link rel="canonical" href="https://lings.vercel.app/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
@@ -61,6 +71,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
+    </>
   );
 };
 

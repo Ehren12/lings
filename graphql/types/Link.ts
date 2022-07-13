@@ -79,9 +79,9 @@ export const CreateLinkMutation = extendType({
             email: ctx.user.email,
           },
         });
-         if (!user || user.role !== 'ADMIN') {
-          throw new Error(`You do not have permission to perform action`);
-        }
+        //  if (!user || user.role !== 'ADMIN') {
+        //   throw new Error(`You do not have permission to perform action`);
+        // }
         const newLink = {
           title: args.title,
           url: args.url,
